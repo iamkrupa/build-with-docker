@@ -110,3 +110,6 @@ under `addon.PodIdentityAssociations`, and run `eksctl update addon`
 2024-07-09 22:48:29 [✔]  created 1 managed nodegroup(s) in cluster "krupa-demo-cluster"
 2024-07-09 22:48:31 [ℹ]  kubectl command should work with "C:\\Users\\HP\\.kube\\config", try 'kubectl get nodes'
 2024-07-09 22:48:31 [✔]  EKS cluster "krupa-demo-cluster" in "us-east-1" region is ready`
+
+
+- Delete cluster `eksctl delete cluster --name="krupa-demo-cluster"`
