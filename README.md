@@ -15,7 +15,8 @@
 
 
 
-# issues I faced during this 
+# issues I faced during multiple code changes and building Images
+
 
 - when I update my webpage and rebuild image, the new changes were not reflected in the new image as the docker caches layers.
 - To ensure that your Docker image is always built with the latest version of your webpage files, you can use a strategy that forces Docker to invalidate the cache for those specific files.
