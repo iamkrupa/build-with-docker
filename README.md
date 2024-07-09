@@ -12,3 +12,12 @@
 - to login to ECR ` aws ecr get-login-password | docker login -u AWS --password-stdin "https://$(aws sts get-caller-identity --query 'Account' --output text).dkr.ecr.us-east-1.amazonaws.com`
 - in order to successfully login to ECR using above command, you have to set up local AWS CLI and configure with AWS IAM user Access Keys.
 - Push Command `docker push 975050204585.dkr.ecr.us-east-1.amazonaws.com/krupa-web-app:latest`
+
+
+
+# issues I faced during this 
+
+- when I update my webpage and rebuild image, the new changes were not reflected in the new image as the docker caches layers.
+- To ensure that your Docker image is always built with the latest version of your webpage files, you can use a strategy that forces Docker to invalidate the cache for those specific files.
+- command I used to invalidate cache `docker build --no-cache -t krupa-web-app:no-cache .`
+`
